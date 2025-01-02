@@ -8,8 +8,9 @@
 </head>
 <body>
     <div class="login-form">
-        <form action="">
-            <h1>Welcome</h1>
+        <!-- Login Form -->
+        <form id="login" action="">
+            <h1>Hello my <br> old friend</h1>
             <div class="form-group">
                 <label for="">Username</label>
                 <input type="text">
@@ -18,13 +19,46 @@
                 <label for="">Password</label>
                 <input type="password">
             </div>
-            <div class="button">
-                <button>Login</button>
-            </div>
-            <div class="button">
-                <a href="#">I don't have any acount</a>
+            <div class="btn-group">
+                <div class="button">
+                    <button>Login</button>
+                </div>
+                <div class="active-btn-signup button">
+                    <button >I don't have any acount</button>
+                </div>
             </div>
         </form>
+
+        <!-- Signup Form -->
+        <form id="signup" class="active-signup" action="">
+            <h1>Welcome</h1>
+            <div class="form-group">
+                <label for="">Email</label>
+                <input type="email" placeholder="Type your Email">
+            </div>
+            <div class="form-group">
+                <label for="">Username</label>
+                <input type="text" placeholder="Choose a username">
+            </div>
+            <div class="form-group">
+                <label for="">Choose your Password</label>
+                <input type="password">
+            </div>
+            <div class="form-group">
+                <label for="">Confirm your Password</label>
+                <input type="password">
+            </div>
+            <div class="btn-group">
+                <div class="button">
+                    <button>Signup</button>
+                </div>
+                <div class="active-btn-login button">
+                    <button>I already have acount</button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Image part -->
         <div class="login-image">
             <img src="./File/3-32946_celular-fondos-de-pantalla-de-musica.png"  alt="">
         </div>
@@ -41,5 +75,6 @@
     <div class="circle-9 mini-circle"></div>
     <div class="circle-10 mini-circle"></div>
 
+    <script src="./script.js"></script>
 </body>
 </html>

@@ -24,6 +24,7 @@ body {
     display: flex;
     border-radius: 20px;
     border: 5px solid #0f1337;
+    position: relative;
 }
 
 .login-form form {
@@ -37,7 +38,7 @@ body {
 
 .login-form form h1 {
     color: black;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 /* Form */
@@ -76,12 +77,24 @@ body {
     margin-bottom: 2rem;
     padding: 10px;
     cursor: pointer;
+    font-weight: 700;
 }
 
 .button a {
     color: black;
     text-decoration: none;
     font-weight: 700;
+}
+
+/* Signup form */
+.btn-group {
+    display: flex;
+    gap: 2rem;
+    width: 50%;
+}
+
+.btn-group .button {
+    width: 100% !important; 
 }
 
 /* Login Image */
@@ -100,6 +113,16 @@ body {
     height: 100%;
     border-radius: 0 20px 20px 0;
 }
+
+/* Switch between Login form and Signup form */
+.active-signup {
+    display: none !important;
+}
+
+.active-login {
+    display: none !important;
+}
+
 
 /* Circle */
 
@@ -203,6 +226,12 @@ body {
     top: 80%;
 }
 
+@media (max-width: 1024px){
+    .btn-group {
+        flex-direction: column;
+        gap: 0;
+    }
+}
 
 @media (max-width: 768px){
     .login-image {
@@ -211,5 +240,31 @@ body {
     
     .login-form form {
         width: 100%;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .button button {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 426px){
+    .form-group {
+        margin-bottom: 1rem;
+        width: 80%;
+    }
+
+    .form-group label {
+        font-weight: normal;
+    }
+}
+
+@media (max-width: 348px){
+    .btn-group {
+        width: 80%;
     }
 }
